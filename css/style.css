@@ -1,0 +1,264 @@
+.form-col--checkbox {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+/* .order-list-table-item:nth-of-type(2n) .order-list-table-item-col__download-block {
+  z-index: n;
+} */
+
+.order-list-table-item-col__download-block {
+  position: relative;
+  display: inline-block;
+  margin-right: -5px;
+}
+
+.order-list-table-item-col__download-button {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  transform: translateY(5px);
+  margin-left: 10px;
+  z-index: 2;
+  font-size: 0;
+  line-height: 0;
+}
+
+.order-list-table-item-col__download-button:hover {
+  cursor: pointer;
+}
+
+.order-list-table-item-col__download-button svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  color: #94A0B1;
+  transition: color 0.2s;
+}
+
+.order-list-table-item-col__download-button:hover svg {
+  color: #2858FF;
+}
+
+.order-list-table-item-col__download-popup {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0px 1px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  min-width: 196px;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+  z-index: 3;
+}
+
+.order-list-table-item-col__download-popup-header {
+  display: none;
+}
+
+.order-list-table-item-col__download-popup.opened {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.order-list-table-item-col__download-popup a {
+  display: flex;
+  color: #1A1A1A;
+  align-items: center;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  transition: color 0.2s;
+}
+
+.order-list-table-item-col__download-popup a:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.order-list-table-item-col__download-popup a:hover {
+  color: #2858FF;
+}
+
+.order-list-table-item-col__download-popup svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.order-list-table-item-col__download-popup svg.for-mobile {
+  display: none;
+  stroke: #94A0B1;
+  margin-left: auto;
+}
+
+@media (max-width: 767px) {
+  .order-list-table-item-col__download-block {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    margin-left: 14px;
+  }
+
+  .order-list-table-item-col__download-button {
+    margin: 0;
+    transform: translateY(4px);
+  }
+
+  .order-list-table-item-col__summ .js--order-list-table-repeat {
+    display: inline-block;
+    width: calc(100% - 42px);
+  }
+
+  .order-list-table-item-col__download-popup {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    padding: 0;
+    z-index: 1000;
+  }
+  
+  .order-list-table-item-col__download-popup-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  .order-list-table-item-col__download-popup-body {
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    padding-bottom: 24px;
+    border-radius: 4px 4px 0px 0px;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+  }
+
+  .order-list-table-item-col__download-popup.opened .order-list-table-item-col__download-popup-body {
+    transform: translateY(0);
+  }
+
+  .order-list-table-item-col__download-popup-header {
+    display: flex;
+    margin-bottom: 24px;
+    align-items: flex-start;
+  }
+
+  .order-list-table-item-col__download-popup-header-info span:first-child {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    color: #94A0B1;
+  }
+
+  .order-list-table-item-col__download-popup-header-info span:last-child {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+
+  .order-list-table-item-col__download-popup-header button {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    padding: 4px;
+    margin-left: auto;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .order-list-table-item-col__download-popup-header button svg {
+    width: 16px;
+    height: 16px;
+    fill: #94A0B1;
+    margin: 0;
+  }
+
+  .order-list-table-item-col__download-popup svg.for-mobile {
+    display: block;
+    margin-right: 0;
+  }
+}
+
+.order-documents {
+  margin-bottom: 36px;
+}
+
+.order-documents__item {
+  width: 100%;
+}
+
+.order-documents__item:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.order-documents__item-icon {
+  display: block;
+}
+
+.order-documents__item a {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: #F4F4F8;
+  border-radius: 5px;
+}
+
+.order-documents__item svg {
+  stroke: currentColor;
+  width: 24px;
+  height: 24px;
+}
+
+.order-documents__item-icon {
+  color: black;
+}
+
+.order-documents__item-info {
+  padding-left: 20px;
+}
+
+.order-documents__item-info span {
+  display: block;
+}
+
+.order-documents__item-info span:first-child {
+  color: #1A1A1A;
+  font-size: 14px;
+}
+
+.order-documents__item-info span:nth-child(2) {
+  color: #94A0B1;
+  font-size: 12px;
+}
+
+.order-documents__icon-download {
+  color: #94A0B1;
+  margin-left: auto;
+  transition: color 0.2s;
+}
+
+.order-documents__icon-download svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+
+.order-documents__item a:hover .order-documents__icon-download {
+  color: #2858FF;
+}
